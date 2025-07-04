@@ -34,7 +34,7 @@ app.get('/api/user/:id', function (req, res) {
 
     if (isNaN(user_id)) {
 
-        res.send(JSON.stringify({ "user_web_api_error": "Id Provided is not Valid" }));
+        res.send(JSON.stringify({ "user_web_api_result": "Id Provided is not Valid" }));
 
     }
 

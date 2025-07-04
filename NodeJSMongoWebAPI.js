@@ -28,21 +28,6 @@ app.get('/status', function (req, res) {
     res.send(response);
 });
 
-
-// Model Classes - Not Used
-
-class User {
-
-    constructor(Id, Name, Email, Age) {
-
-        this.Id = Id;
-        this.Name = Name;
-        this.Email = Email;
-        this.Age = Age;
-
-    }
-}
-
 app.get('/api/user/:id', function (req, res) {
 
     let user_id = req.params['id'];
@@ -84,6 +69,7 @@ app.get('/api/user/:id', function (req, res) {
                 // Check User Age > 21
                 if (result.Age > 21) {
 
+                    // Return the JSON Representation of the User
                     res.send(JSON.stringify(result));
 
                 } else {

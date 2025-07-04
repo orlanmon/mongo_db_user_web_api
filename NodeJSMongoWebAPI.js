@@ -36,6 +36,8 @@ app.get('/api/user/:id', function (req, res) {
 
         res.send(JSON.stringify({ "user_web_api_result": "Id Provided is not Valid" }));
 
+        return;
+
     }
 
     mongo_db_client.connect(mongo_db_url, function (err, db) {
